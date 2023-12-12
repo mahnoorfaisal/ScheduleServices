@@ -1,0 +1,117 @@
+<!--
+ Copyright (c) 2014, 2023, Oracle and/or its affiliates.
+ Licensed under The Universal Permissive License (UPL), Version 1.0
+ as shown at https://oss.oracle.com/licenses/upl/
+ -->
+<div class="oj-hybrid-padding">
+    <h1>Users</h1>
+    <oj-dialog id="modalDialog1" dialog-title="Add New User" aria-describedby="desc">
+        <div slot="body">
+            <oj-c-input-text
+                id="serveName-input"
+                value="{{userName}}"
+                label-hint="Username"
+                label-edge="inside"
+            ></oj-c-input-text>
+            <br>
+            <br>
+            <oj-c-input-text
+                id="serveDesc-input"
+                value="{{userDisplay}}"
+                label-hint="Display Name"
+                label-edge="inside"
+            ></oj-c-input-text>
+            <br>
+            <br>
+            <oj-combobox-one
+                id="combobox1"
+                value="{{userType}}"
+                label-hint="User Type"
+                class="oj-form-control-max-width-md"
+            >
+                <oj-option value="ADMIN">ADMIN</oj-option>
+                <oj-option value="USER">USER</oj-option>
+            </oj-combobox-one>
+            <br>
+            <br>
+            <oj-checkboxset
+                id="enabledCheckboxset"
+                value="{{userActive}}"
+                label-hint="Active"
+                required
+            >
+                <oj-option value="Y">Activate</oj-option>
+            </oj-checkboxset>
+        </div>
+        <div slot="footer">
+            <oj-button id="okButton" on-oj-action="[[save]]">Save</oj-button>
+            <oj-button id="okButton" on-oj-action="[[cancel]]">Cancel</oj-button>
+        </div>
+    </oj-dialog>
+    <oj-button id="buttonOpener" on-oj-action="[[open]]" chroming="outlined">Add New User</oj-button>
+    <div id="componentDemoContent" style="width: 1px; min-width: 100%;">
+        <oj-table
+            id="table"
+            aria-label="Services"
+            accessibility.row-header="depName"
+            data="[[pagingDataProvider]]"
+            selection-mode='{"row": "multiple", "column": "multiple"}'
+            dnd='{"reorder": {"columns": "enabled"}}'
+            scroll-policy="loadMoreOnScroll"
+            scroll-policy-options='{"fetchSize": 10}'
+            selection-mode='{"row": "single"}'
+            columns='[
+      {"headerText": "Actions", 
+      "field": "userName",
+      "id": "serviceAction",
+      "headerClassName": "oj-sm-only-hide tableHeaderStyle",
+      "className": "oj-sm-only-hide",
+      "resizable": "enabled",
+      "template":"cellTemplate"
+    },
+    {"headerText": "Name", 
+                 "field": "userName",
+                 "headerClassName": "oj-sm-only-hide  tableHeaderStyle",
+                 "className": "oj-sm-only-hide",
+                 "resizable": "enabled",
+                 "id": "userName"},
+
+                {"headerText": "Display Name", 
+                 "field": "displayName",
+                 "resizable": "enabled",
+                 "headerClassName": "oj-sm-only-hide  tableHeaderStyle",
+                 "className": "oj-sm-only-hide",
+                 "id": "displayName"},
+                 {"headerText": "User Type", 
+                 "field": "userType",
+                 "resizable": "enabled",
+                 "headerClassName": "oj-sm-only-hide  tableHeaderStyle",
+                 "className": "oj-sm-only-hide",
+                 "id": "userType"},
+                 {"headerText": "Activation Status", 
+                 "field": "userActive",
+                 "resizable": "enabled",
+                 "headerClassName": "oj-sm-only-hide  tableHeaderStyle",
+                 "className": "oj-sm-only-hide",
+                 "id": "userActive"}
+               ]'
+            class="demo-table-container"
+        >
+            <oj-paging-control
+                id="paging"
+                page-size="5"
+                slot="bottom"
+                data="[[pagingDataProvider]]"
+            ></oj-paging-control>
+        </oj-table>
+    </div>
+    <oj-messages
+        id="oj-messages-id"
+        class="oj-color-invert"
+        messages="[[messagesDataprovider]]"
+        display="notification"
+        display-options.category="none"
+        position='{"my":{"vertical" :"top", "horizontal": "end"}, "at": {"vertical": "top", "horizontal": "end"},"of": "window"}'
+    ></oj-messages>
+</div>
+</div>

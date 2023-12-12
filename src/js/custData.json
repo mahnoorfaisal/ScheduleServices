@@ -1,0 +1,18 @@
+[{
+  "group":"Customer 1",
+  "id":1,
+  "series":"Customer 1",
+  "value":5
+},
+{
+"group":"Customer 2",
+"id":2,
+"series":"Customer 2",
+"value":3
+},
+{
+"group":"Customer 3",
+"id":3,
+"series":"Customer 3",
+"value":8
+}]

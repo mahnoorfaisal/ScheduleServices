@@ -1,0 +1,31 @@
+[
+{
+  "group":"APRIL",
+  "id":1,
+  "series":"ANALYTICS",
+  "value":1
+},
+{
+  "group":"NOV",
+  "id":2,
+  "series":"ANALYTICS",
+  "value":1
+},
+{
+  "group":"NOV",
+  "id":3,
+  "series":"PURGING",
+  "value":1
+},
+{
+  "group":"JUNE",
+  "id":4,
+  "series":"RETIRMENT",
+  "value":1
+},
+{
+  "group":"APRIL",
+  "id":5,
+  "series":"ARCHIVING",
+  "value":1
+}]

@@ -1,0 +1,11 @@
+[  {
+     
+    "serviceName": "ARCHIVING",
+    "serviceDescription": "Archiving Data"
+  
+  },
+  {
+    "serviceName": "ANALYTICS",
+    "serviceDescription": "Data Analytics"
+   
+  }]

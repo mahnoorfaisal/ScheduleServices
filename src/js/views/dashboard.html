@@ -1,0 +1,142 @@
+<!--
+ Copyright (c) 2014, 2023, Oracle and/or its affiliates.
+ Licensed under The Universal Permissive License (UPL), Version 1.0
+ as shown at https://oss.oracle.com/licenses/upl/
+ -->
+<div class="oj-hybrid-padding">
+  <h1>Dashboard Content Area</h1>
+  <div class="oj-flex oj-flex-int">
+
+    <div class="oj-flex-item oj-md-6 oj-sm-12 oj-panel dashboardPanel">
+      <div
+        class="oj-flex oj-sm-12 oj-panel dashboardPanel oj-sm-justify-content-center header"
+      >
+        <strong style="color: whitesmoke"> Next Service</strong>
+      </div>
+      <oj-form-layout id="formLayoutOptions" max-columns="1" direction="row">
+        <br />
+        <p style="font-weight: bolder; color: rgb(127, 134, 127)">
+          Service Name:
+          <span style="color: rgb(161, 161, 161)"
+            ><oj-bind-text value="[[serviceName]]"></oj-bind-text
+          ></span>
+        </p>
+        <p style="font-weight: bold; color: rgb(127, 134, 127)">
+          Service Date:
+          <span style="color:rgb(161, 161, 161)""
+            ><oj-bind-text value="[[serviceDate]]"></oj-bind-text
+          ></span>
+        </p>
+        <p style="font-weight: bold; color: rgb(127, 134, 127)">
+          Description:
+          <span style="color:rgb(161, 161, 161)"
+            ><oj-bind-text value="[[serviceDescription]]"></oj-bind-text
+          ></span>
+        </p>
+        <p style="font-weight: bold; color: rgb(127, 134, 127)">
+          Customer:
+          <span style="color:rgb(161, 161, 161)"
+            ><oj-bind-text value="[[serviceCustomer]]"></oj-bind-text
+          ></span>
+        </p>
+        <p style="font-weight: bold; color: rgb(127, 134, 127)">
+          Last Note:
+          <span style="color:rgb(161, 161, 161)"
+            ><oj-bind-text value="[[serviceLastNote]]"></oj-bind-text
+          ></span>
+        </p>
+        <p style="font-weight: bold; color: rgb(127, 134, 127)">
+          Added By:
+          <span style="color:rgb(161, 161, 161)"
+            ><oj-bind-text value="[[serviceAddedBy]]"></oj-bind-text
+          ></span>
+        </p>
+        <p style="font-weight: bold; color: rgb(127, 134, 127)">
+          Added Date:
+          <span style="color:rgb(161, 161, 161)"
+            ><oj-bind-text value="[[serviceAddedDate]]"></oj-bind-text
+          ></span>
+        </p>
+      </oj-form-layout>
+    </div>
+
+
+    <div class="oj-flex-item oj-md-6 oj-sm-12 oj-panel dashboardPanel">
+      <div
+        class="oj-flex oj-sm-12 oj-panel dashboardPanel oj-sm-justify-content-center header"
+      >
+        <strong style="color: whitesmoke">Services This Month</strong>
+      </div>
+      <oj-chart
+        id="pieChart"
+        type="pie"
+        data="[[dataProvider]]"
+        animation-on-display="auto"
+        animation-on-data-change="auto"
+        style-defaults.three-d-effect="off"
+        hover-behavior="dim"
+      >
+        <template slot="itemTemplate" data-oj-as="item">
+          <oj-chart-item
+            value="[[item.data.value]]"
+            group-id="[[ [item.data.group_id] ]]"
+            series-id="[[item.data.series]]"
+          ></oj-chart-item>
+        </template>
+      </oj-chart>
+    </div>
+
+
+    <div class="oj-flex-item oj-md-6 oj-sm-12 oj-panel dashboardPanel">
+      <div
+        class="oj-flex oj-sm-12 oj-panel dashboardPanel oj-sm-justify-content-center header"
+      >
+        <strong style="color: whitesmoke">Services This Year</strong>
+      </div>
+      <oj-chart
+        id="barChart"
+        type="bar"
+        orientation="vertical"
+        stack="off"
+        data="[[dataProvider3]]"
+        animation-on-display="auto"
+        animation-on-data-change="auto"
+        hover-behavior="dim"
+      >
+        <template slot="itemTemplate" data-oj-as="item">
+          <oj-chart-item
+            value="[[item.data.value]]"
+            group-id="[[ [item.data.group] ]]"
+            series-id="[[item.data.series]]"
+          ></oj-chart-item>
+        </template>
+      </oj-chart>
+    </div>
+
+    <div class="oj-flex-item oj-md-6 oj-sm-12 oj-panel dashboardPanel">
+      <div
+      class="oj-flex oj-sm-12 oj-panel dashboardPanel oj-sm-justify-content-center header"
+    >
+      <strong style="color: whitesmoke">Services Per Customer</strong>
+    </div>
+    <oj-chart
+    id="barChart4"
+    type="bar"
+    orientation="vertical"
+    stack="off"
+    data="[[dataProvider4]]"
+    animation-on-display="auto"
+    animation-on-data-change="auto"
+    hover-behavior="dim"
+  >
+    <template slot="itemTemplate" data-oj-as="item">
+      <oj-chart-item
+        value="[[item.data.value]]"
+        group-id="[[ [item.data.group] ]]"
+        series-id=""
+      ></oj-chart-item>
+    </template>
+  </oj-chart>
+    </div>
+  </div>
+</div>

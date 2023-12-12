@@ -1,0 +1,44 @@
+<!--
+ Copyright (c) 2014, 2023, Oracle and/or its affiliates.
+ Licensed under The Universal Permissive License (UPL), Version 1.0
+ as shown at https://oss.oracle.com/licenses/upl/
+ -->
+<div class="oj-hybrid-padding">
+    <div class="banner">
+        <h3 style="font-weight: lighter;  color: whitesmoke;">Sign In
+        </h4>
+        <h2 style="font-weight:400; color: whitesmoke;">
+            Services Management System
+        </h3>
+    </div>
+    <div>
+        <oj-c-input-text
+            id="serveName-input"
+            value="{{username}}"
+            label-hint="Username"
+            label-edge="inside"
+        ></oj-c-input-text>
+        <br>
+        <br>
+        <oj-c-input-text
+            id="serveDesc-input"
+            value="{{password}}"
+            label-hint="Password"
+            label-edge="inside"
+        ></oj-c-input-text>
+        <br>
+        <br>
+        <br>
+        <oj-button id="okButton" on-oj-action="[[login]]" chroming="callToAction">Login</oj-button>
+        <oj-messages
+            id="oj-messages-id"
+            class="oj-color-invert"
+            messages="[[messagesDataprovider]]"
+            display="notification"
+            display-options.category="none"
+            position='{"my":{"vertical" :"top", "horizontal": "end"}, 
+        "at": {"vertical": "top", "horizontal": "end"},
+         "of": "window"}'
+        ></oj-messages>
+    </div>
+</div>

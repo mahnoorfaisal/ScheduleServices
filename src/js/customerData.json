@@ -1,0 +1,44 @@
+[  {
+     
+  "CustomerId": "1",
+  "CustomerName": "Customer 1",
+  "CustomerEmail": "customer01@gmail.com",
+  "CustomerAddress":"Apartment XYZ , Street ABC",
+  "CustomerDescription":"Test Description",
+  "CustomerPhone":"+92346604321",
+  "CustomerWebsite":"wwww.customer00.com"
+
+},
+{
+     
+  "CustomerId": "2",
+  "CustomerName": "Customer 1",
+  "CustomerEmail": "customer01@gmail.com",
+  "CustomerAddress":"Apartment XYZ , Street ABC",
+  "CustomerDescription":"Test Description",
+  "CustomerPhone":"+92346604321",
+  "CustomerWebsite":"wwww.customer00.com"
+
+},
+{
+     
+  "CustomerId": "3",
+  "CustomerName": "Customer 1",
+  "CustomerEmail": "customer09@gmail.com",
+  "CustomerAddress":"Apartment XYZ , Street ABC",
+  "CustomerDescription":"Test Description",
+  "CustomerPhone":"+92346604321",
+  "CustomerWebsite":"wwww.customer00.com"
+
+},
+{
+     
+  "CustomerId": "4",
+  "CustomerName": "Customer 2",
+  "CustomerEmail": "customer01@gmail.com",
+  "CustomerAddress":"Apartment XYZ , Street ABC",
+  "CustomerDescription":"Test Description",
+  "CustomerPhone":"+92346604321",
+  "CustomerWebsite":"wwww.customer00.com"
+
+}]

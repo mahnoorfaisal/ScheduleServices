@@ -1,0 +1,18 @@
+[{
+    "group":"ARCHIVING",
+    "id":1,
+    "series":"ARCHIVING",
+    "value":1
+},
+{
+  "group":"ANALYTICS",
+  "id":2,
+  "series":"ANALYTICS",
+  "value":1
+},
+{
+  "group":"PURGING",
+  "id":3,
+  "series":"PURGING",
+  "value":1
+}]
